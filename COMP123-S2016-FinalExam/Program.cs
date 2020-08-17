@@ -8,18 +8,21 @@ namespace COMP123_M2020_FinalExam
 {
     public static class Program
     {
-        public static Character character = new Character();
-
+        public static Character character;
+        public static SplashForm splashForm;
+        public static GenerateNameForm generateNameForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AbilityGeneratorForm());
+            character = new Character();
+            generateNameForm = new GenerateNameForm();
+            Application.Run(new SplashForm());
         }
     }
 }
