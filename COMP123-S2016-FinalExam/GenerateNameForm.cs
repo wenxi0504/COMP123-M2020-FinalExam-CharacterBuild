@@ -34,8 +34,15 @@ namespace COMP123_M2020_FinalExam
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
+            Program.character.FirstName = FirstNameTextBox.Text;
+            Program.character.LastName = LastNameTextBox.Text;
         }
 
-
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            AbilityGeneratorForm AbilityGeneratorForm=new AbilityGeneratorForm();
+            AbilityGeneratorForm.Show();
+            this.Hide();
+        }
     }
 }
