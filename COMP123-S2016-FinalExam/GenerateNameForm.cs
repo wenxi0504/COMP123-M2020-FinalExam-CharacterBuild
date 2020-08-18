@@ -42,7 +42,7 @@ namespace COMP123_M2020_FinalExam
         {
             AbilityGeneratorForm AbilityGeneratorForm=new AbilityGeneratorForm();
             AbilityGeneratorForm.Show();
-            this.Hide();
+           this.Hide();
         }
     }
 }
