@@ -21,6 +21,8 @@ namespace COMP123_M2020_FinalExam
         {
             Program.generateNameForm.Show();
             this.Hide();
+            //Ensure that this only happens once
+            SplashFormTimer.Enabled = false;
         }
     }
 }

@@ -40,7 +40,8 @@ namespace COMP123_M2020_FinalExam
         }
 
         private void FinalForm_Load(object sender, EventArgs e)
-        {
+        {  //Program.character object and fill out the Text values of the TextBox controls
+           //contained in this form
             FirstNameTextBox.Text = Program.character.FirstName;
             LastNameTextBox.Text = Program.character.LastName;
             RaceTextBox.Text = Program.character.Race;

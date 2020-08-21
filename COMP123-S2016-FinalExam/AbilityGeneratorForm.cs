@@ -181,6 +181,7 @@ namespace COMP123_M2020_FinalExam
 
             // Step 5 - Show the next form
             raceAndClassForm.Show();
+            
         }
     }
 }

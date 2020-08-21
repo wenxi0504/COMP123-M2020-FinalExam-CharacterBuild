@@ -18,19 +18,26 @@ namespace COMP123_M2020_FinalExam
         }
 
         private void GenerateNames()
-        {   Random numbers=new Random();
+        {   
+            //create object numbers
+            Random numbers=new Random();
+            // randomly create number from 0-50 and assign to index of firstname
+            // and lastname
             int firtNameIndex=numbers.Next(50);
             int lastNameIndex= numbers.Next(50);
+            //Assign the random firstname/lastname value to firstname textbox
             FirstNameTextBox.Text = FirstNameListBox.Items[firtNameIndex].ToString();
             LastNameTextBox.Text = LastNameListBox.Items[lastNameIndex].ToString();
 
         }
-
+        //In the GenerateNameForm’s Load event handler. Call the GenerateNames method.
         private void GenerateNameForm_Load(object sender, EventArgs e)
         {
             GenerateNames();
         }
-
+        //In the GenerateNameButton’s click event handler,
+        //set the value of the FirstName/lastname property of the Program.character object to the value of
+        //text property of the FirstNameTextBox/LastName textbox control
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
@@ -39,10 +46,10 @@ namespace COMP123_M2020_FinalExam
         }
 
         private void NextButton_Click(object sender, EventArgs e)
-        {
-            AbilityGeneratorForm AbilityGeneratorForm=new AbilityGeneratorForm();
-            AbilityGeneratorForm.Show();
-           this.Hide();
+        { //instantiate a new AbilityGeneratorForm object of the AbilityGeneratorForm class.
+            AbilityGeneratorForm abilityGeneratorForm=new AbilityGeneratorForm();
+            abilityGeneratorForm.Show();
+            this.Hide();
         }
     }
 }
